@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+.container {
+  @apply max-w-300 mx-auto px-5 md:px-10;
+}
+
+.card {
+  @apply bg-white px-4 py-5 shadow-sm/10 rounded-lg hover:shadow-lg/10 relative transition-shadow duration-75 ease-in;
+}
+
+.card__header {
+  @apply mb-10;
+}
+.picture {
+  background: url("https://picsum.photos/1980/1080");
+  background-color: rgba(0, 0, 0, 0.55);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+ul li {
+  @apply w-full text-lg flex justify-between items-center pb-1;
+}
+
+ul li:not(:last-child) {
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 10px;
+}
